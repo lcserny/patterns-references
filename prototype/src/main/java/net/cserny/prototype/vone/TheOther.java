@@ -1,24 +1,24 @@
-package net.cserny.prototype;
+package net.cserny.prototype.vone;
 
 /**
  * Created by user on 06.05.2016.
  */
-public class That implements Prototype, Command
+public class TheOther implements Prototype, Command
 {
     @Override
     public void execute()
     {
-        System.out.println("That:execute");
+        System.out.println("TheOther:execute");
     }
 
     @Override
     public String getName()
     {
-        return "That";
+        return "TheOther";
     }
 
     public Object clone()
     {
-        return new That();
+        return new TheOther();
     }
 }

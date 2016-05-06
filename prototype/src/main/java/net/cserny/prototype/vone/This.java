@@ -1,4 +1,4 @@
-package net.cserny.prototype;
+package net.cserny.prototype.vone;
 
 /**
  * Created by user on 06.05.2016.
