@@ -9,17 +9,7 @@ public class Singleton
     private Singleton() {}
 
     // For testing purposes
-    private int number;
-
-    public int getNumber()
-    {
-        return number;
-    }
-
-    public void setNumber(int number)
-    {
-        this.number = number;
-    }
+    public int number;
 
     /**
      * SingletonHolder is loaded on the first execution of Singleton.getInstance()

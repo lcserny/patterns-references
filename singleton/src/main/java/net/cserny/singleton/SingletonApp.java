@@ -8,12 +8,11 @@ public class SingletonApp
     public static void main(String[] args)
     {
         Singleton firstSingleton = Singleton.getInstance();
-        firstSingleton.setNumber(5);
+        firstSingleton.number = 5;
         Singleton secondSingleton = Singleton.getInstance();
-        secondSingleton.setNumber(7);
+        secondSingleton.number = 7;
 
-
-        System.out.println(firstSingleton.getNumber());
-        System.out.println(secondSingleton.getNumber());
+        System.out.println(firstSingleton.number);
+        System.out.println(secondSingleton.number);
     }
 }
