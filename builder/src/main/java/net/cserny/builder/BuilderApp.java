@@ -8,14 +8,12 @@ public class BuilderApp
     public static void main(String[] args)
     {
         Waiter waiter = new Waiter();
-        PizzaBuilder hawaiianBuilder = new HawaiianPizzaBuilder();
-        PizzaBuilder spicyBuilder = new SpicyPizzaBuilder();
 
-        waiter.setPizzaBuilder(hawaiianBuilder);
+        waiter.setPizzaBuilder(new HawaiianPizzaBuilder());
         waiter.constructPizza();
         Pizza hawaiianPizza = waiter.getPizza();
 
-        waiter.setPizzaBuilder(spicyBuilder);
+        waiter.setPizzaBuilder(new SpicyPizzaBuilder());
         waiter.constructPizza();
         Pizza spicyPizza = waiter.getPizza();
 
