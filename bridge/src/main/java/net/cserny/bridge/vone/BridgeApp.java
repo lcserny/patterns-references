@@ -1,4 +1,4 @@
-package net.cserny.bridge;
+package net.cserny.bridge.vone;
 
 import java.util.Random;
 

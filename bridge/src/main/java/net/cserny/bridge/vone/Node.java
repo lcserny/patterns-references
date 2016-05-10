@@ -1,4 +1,4 @@
-package net.cserny.bridge;
+package net.cserny.bridge.vone;
 
 /**
  * Created by user on 10.05.2016.

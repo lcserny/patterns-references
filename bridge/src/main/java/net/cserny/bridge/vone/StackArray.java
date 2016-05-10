@@ -1,21 +1,18 @@
-package net.cserny.bridge;
+package net.cserny.bridge.vone;
 
 /**
  * Created by user on 10.05.2016.
  */
-public class StackList implements StackImpl
+public class StackArray implements StackImpl
 {
-    private Node last;
+    private int[] items = new int[12];
+    private int total = -1;
 
     @Override
     public void push(int i)
     {
-        if (last == null) {
-            last = new Node(i);
-        } else {
-            last.next = new Node(i);
-            last.next.prev = last;
-            last = last.next;
+        if (!isFull()) {
+            items[++total] = i;
         }
     }
 
@@ -25,11 +22,7 @@ public class StackList implements StackImpl
         if (isEmpty()) {
             return -1;
         }
-
-        int ret = last.value;
-        last = last.prev;
-
-        return ret;
+        return items[total--];
     }
 
     @Override
@@ -38,18 +31,18 @@ public class StackList implements StackImpl
         if (isEmpty()) {
             return -1;
         }
-        return last.value;
+        return items[total];
     }
 
     @Override
     public boolean isEmpty()
     {
-        return last == null;
+        return total == -1;
     }
 
     @Override
     public boolean isFull()
     {
-        return false;
+        return total == 11;
     }
 }
